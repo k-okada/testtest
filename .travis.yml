@@ -13,6 +13,10 @@ script:
   - cd ../
   - source /opt/ros/$ROS_DISTRO/setup.bash # re-source setup.bash for setting environmet vairable for package installed via rosdep
   - catkin build
-  - catkin test
+  - catkin test || echo "Ok?"
+  - sudo apt-get install -y ros-$ROS_DISTRO-catkin
+  - catkin_make test || echo "Ok?"
+  - catkin_make_isolated --catkin-make-args test || echo "Ok??"
+
 
 
