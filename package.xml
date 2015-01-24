@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+  <name>testtest</name>
+  <version>0.0.0</version>
+  <description>The testtest package</description>
+
+  <maintainer email="k-okada@todo.todo">k-okada</maintainer>
+
+  <license>TODO</license>
+
+  <test_depend>rostest</test_depend>
+  <test_depend>rospy</test_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+  <export>
+  </export>
+</package>
