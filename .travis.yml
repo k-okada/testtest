@@ -12,9 +12,9 @@ script:
   - ln -s $CI_SOURCE_PATH . # Link the repo we are testing to the new workspace
   - cd ../
   - source /opt/ros/$ROS_DISTRO/setup.bash # re-source setup.bash for setting environmet vairable for package installed via rosdep
+  - sudo apt-get install -y ros-$ROS_DISTRO-catkin ros-$ROS_DISTRO-rospy ros-$ROS_DISTRO-rostest
   - catkin build
   - catkin test || echo "Ok?"
-  - sudo apt-get install -y ros-$ROS_DISTRO-catkin
   - catkin_make test || echo "Ok?"
   - catkin_make_isolated --catkin-make-args test || echo "Ok??"
 
